@@ -52,3 +52,19 @@ class DataLoader:
         # check if the data directory exists, if not, make it
         if not os.path.exists(self.data_dir):
             os.makedirs(self.data_dir)
+
+    def _download_if_needed(self):
+        # download each dataset if it is not already downloaded
+        for url, path in [ 
+            (self.train_url, self.train_path),
+            (self.test_url, self.test_path),
+            (self.label_url, self.label_path),
+        ]:
+            if not os.path.exists(path):
+                subprocess.run(["wget", url, "-O", path], check=True)
+
+    def _load_data(self):
+        pass
+
+    def _build_tf_dataset(self):
+        pass
