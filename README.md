@@ -32,9 +32,9 @@ Dataset options:
 - `color` or `mnist_color` for color MNIST  
 
 Additional options:
--`visualize_latent` # visualize latent space (t-SNE)
--`generate_from_prior` # generate images from the prior p(z)
--`generate_from_posterior` # generate images using q(z|x)
+- `visualize_latent` # visualize latent space (t-SNE)
+- `generate_from_prior` # generate images from the prior p(z)
+- `generate_from_posterior` # generate images using q(z|x)
 
 
 All datasets are automatically downloaded by the `DataLoader` class using `wget` and saved in the `data` subfolder for convenience.  
